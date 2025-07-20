@@ -30,7 +30,7 @@ class UpdateTaskScreen extends StatelessWidget {
             icon: const Icon(Icons.edit, color: Colors.deepPurple),
             onPressed: () {
               FirebaseUserDatabase.updateTask(taskModel);
-            }, // تعديل عنوان المهمة
+            }, 
           ),
         ],
       ),
@@ -59,7 +59,7 @@ class UpdateTaskScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
 
-            // Task Time
+            
             Row(
               children: [
                 const Icon(Icons.access_time, color: Colors.deepPurple),
@@ -77,7 +77,7 @@ class UpdateTaskScreen extends StatelessWidget {
             ),
             const SizedBox(height: 15),
 
-            // Task Priority
+            
             Row(
               children: [
                 const Icon(Icons.flag, color: Colors.deepPurple),
@@ -95,7 +95,7 @@ class UpdateTaskScreen extends StatelessWidget {
             ),
             const SizedBox(height: 25),
 
-            // Delete Task
+            
             GestureDetector(
               onTap: () {
                 AppDialog.showDialogLoading(context);

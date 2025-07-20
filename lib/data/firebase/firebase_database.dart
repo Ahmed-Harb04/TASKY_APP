@@ -22,7 +22,7 @@ abstract class FirebaseUserDatabase {
     return data.data();
   }
 
-  // ✅ وضحنا نوع الدالة: CollectionReference<TaskModel>
+  
   static CollectionReference<TaskModel> collectionTasks() {
     String userId = FirebaseAuth.instance.currentUser?.uid ?? "";
     return collectionUser()
@@ -55,7 +55,7 @@ abstract class FirebaseUserDatabase {
     await docRef.set(userTask);
   }
 
-  // ✅ نفس الدالة زي ما هي لكن مرتبة
+
   static Future<List<TaskModel>> getAllTasks() async {
     var snapshot = await collectionTasks().get();
     return snapshot.docs.map((doc) => doc.data()).toList();

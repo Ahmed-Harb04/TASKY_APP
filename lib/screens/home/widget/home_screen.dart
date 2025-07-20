@@ -8,7 +8,7 @@ import 'package:flutter_application_1/screens/home/widget/container_priority_wid
 import 'package:flutter_application_1/screens/home/widget/empty_screen.dart';
 import 'package:flutter_application_1/screens/home/widget/show_bottom_sheet_widget.dart';
 import 'package:flutter_application_1/screens/home/widget/updata_task_screen.dart';
-import 'package:flutter_application_1/screens/auth/login_screen.dart'; // تأكد من الاستيراد ده
+import 'package:flutter_application_1/screens/auth/login_screen.dart'; 
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -124,14 +124,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   priority: priority,
                   date: selectedDate,
                 ).then((_) async {
-                  Navigator.of(context).pop(); // loading dialog
+                  Navigator.of(context).pop(); 
                   titleTask.clear();
                   descriptionTask.clear();
                   priority = 0;
                   selectedDate = DateTime.now();
-                  Navigator.of(context).pop(); // bottom sheet
+                  Navigator.of(context).pop(); 
 
-                  await getTasks(); // reload tasks
+                  await getTasks(); 
                 }).catchError((error) {
                   Navigator.of(context).pop();
                   AppDialog.showDialogError(context, error);
